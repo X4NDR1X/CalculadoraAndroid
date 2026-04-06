@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".bhaskaraMain">
+
+    <TextView
+        android:id="@+id/delta"
+        android:layout_width="395dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="25dp"
+        android:background="#FFFFFF"
+        android:text="@string/delta"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/root1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/root1"
+        android:layout_width="395dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="25dp"
+        android:background="#FFFFFF"
+        android:text="@string/root1"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/root2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delta" />
+
+    <TextView
+        android:id="@+id/root2"
+        android:layout_width="395dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="60dp"
+        android:background="#FFFFFF"
+        android:text="@string/raiz2"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/valA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/root1" />
+
+    <EditText
+        android:id="@+id/valA"
+        android:layout_width="411dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="@string/valA"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/valB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/root2" />
+
+    <EditText
+        android:id="@+id/valB"
+        android:layout_width="411dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="@string/valB"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/valC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valA" />
+
+    <EditText
+        android:id="@+id/valC"
+        android:layout_width="411dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="@string/valC"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valB" />
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="434dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valC">
+
+        <Button
+            android:id="@+id/returnMain"
+            android:layout_width="217dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFFFFF"
+            android:onClick="returnMain"
+            android:text="@string/under"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textColorLink="#FFFFFF"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/calcBh"
+            android:layout_width="217dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFFFFF"
+            android:onClick="calcBh"
+            android:text="@string/equal"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textColorLink="#FFFFFF"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+    </TableRow>
+</androidx.constraintlayout.widget.ConstraintLayout>
